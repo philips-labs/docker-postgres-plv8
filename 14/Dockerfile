@@ -1,8 +1,8 @@
-FROM postgres:12
-LABEL org.opencontainers.image.authors="clkao@clkao.org"
+FROM postgres:14
+LABEL org.opencontainers.image.authors="anandmohan.tumuluri@philips.com"
 
-ARG PLV8_VERSION=2.3.15 \
-    PLV8_SHASUM="8a05f9d609bb79e47b91ebc03ea63b3f7826fa421a0ee8221ee21581d68cb5ba"
+ARG PLV8_VERSION=3.0.0 \
+    PLV8_SHASUM="de030f5d6b0439710efa05f4c35ffb8ef36ae754fa0e3c46d334352cf1507661"
 
 RUN buildDependencies="build-essential \
     ca-certificates \
