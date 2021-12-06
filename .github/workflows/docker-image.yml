@@ -25,8 +25,7 @@ jobs:
       id: pg10
       uses: docker/build-push-action@v2
       with:
-        context: ./10
-        file: ./Dockerfile
+        context: ./10/
         platforms: linux/amd64
         push: true
         tags: philipslabs/postgres-plv8:10
@@ -34,8 +33,7 @@ jobs:
       id: pg11
       uses: docker/build-push-action@v2
       with:
-        context: ./11
-        file: ./Dockerfile
+        context: ./11/
         platforms: linux/amd64
         push: true
         tags: philipslabs/postgres-plv8:11
@@ -43,11 +41,10 @@ jobs:
       id: pg12
       uses: docker/build-push-action@v2
       with:
-        context: ./12
-        file: ./Dockerfile
+        context: ./12/
         platforms: linux/amd64
         push: true
-        tags: philipslabs/postgres-plv8:12
+        tags: philipslabs/postgres-plv8:12:latest,philipslabs/postgres-plv8:12
     - name: Image digest
       run: |
         echo ${{ steps.pg10.outputs.digest }}
