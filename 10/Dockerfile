@@ -25,6 +25,8 @@ RUN buildDependencies="build-essential \
   && cd /tmp/build \
   && echo $PLV8_SHASUM v$PLV8_VERSION.tar.gz | sha256sum -c \
   && tar -xzf /tmp/build/v$PLV8_VERSION.tar.gz -C /tmp/build/ \
+  && git config --global user.email "plv8_builder@noname.io" \
+  && git config --global user.name "PLV8 Builder" \
   && cd /tmp/build/plv8-$PLV8_VERSION \
   && make static \
   && make install \
